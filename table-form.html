@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Étudiants</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f2f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .table-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #4facfe;
+      color: white;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f9ff;
+    }
+
+    img.profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        padding: 10px;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-weight: bold;
+        color: #4facfe;
+      }
+
+      img.profile-pic {
+        width: 50px;
+        height: 50px;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Liste des Étudiants</h2>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Adresse</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Classe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Photo">
+            <img class="profile-pic" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Photo étudiant">
+          </td>
+          <td data-label="Nom">Jean</td>
+          <td data-label="Prénom">Marc</td>
+          <td data-label="Adresse">Rue des Palmiers, Port-au-Prince</td>
+          <td data-label="Email">jean.marc@email.com</td>
+          <td data-label="Téléphone">+509 4455 6677</td>
+          <td data-label="Classe">L2</td>
+        </tr>
+        <tr>
+          <td data-label="Photo">
+            <img class="profile-pic" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Photo étudiante">
+          </td>
+          <td data-label="Nom">Paul</td>
+          <td data-label="Prénom">Cynthia</td>
+          <td data-label="Adresse">Avenue Magloire, Cap-Haïtien</td>
+          <td data-label="Email">cynthia.paul@email.com</td>
+          <td data-label="Téléphone">+509 3344 5566</td>
+          <td data-label="Classe">M1</td>
+        </tr>
+        <!-- Tu peux ajouter d'autres étudiants ici -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
