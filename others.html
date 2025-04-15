@@ -1,0 +1,29 @@
+/* Overlay noir avec opacité */
+.overlay {
+ position: absolute; /* Permet de recouvrir toute la section */
+ top: 0;
+ left: 0;
+ width: 100%; /* Occupe toute la largeur */
+ height: 100%; /* Occupe toute la hauteur */
+ background-color: rgba(0, 0, 0, 0.5); /* Noir avec 50% d'opacité */
+}
+
+.hero h1 {
+ position: relative; /* Permet de s'assurer que le texte est au-dessus de l'overlay */
+ z-index: 1; /* Place le texte au-dessus de l'overlay */
+}
+/* Style du Footer */
+footer {
+ background-color: #222; /* Couleur de fond sombre */
+ color: white; /* Texte en blanc */
+ text-align: center; /* Centre le texte */
+ padding: 15px; /* Ajoute de l'espace autour du texte */
+ position: relative; /* Garde le footer en bas sans le fixer */
+ bottom: 0;
+ width: 100%; /* Occupe toute la largeur */
+}
+
+<footer>
+ <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
+ </footer>
+
